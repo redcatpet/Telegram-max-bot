@@ -1,0 +1,38 @@
+{
+  "name": "telegram-max-bridge",
+  "version": "0.1.0",
+  "description": "Playwright-based bridge between MAX Web and a private Telegram bot.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "login": "HEADLESS=false tsx src/index.ts login",
+    "start": "tsx src/index.ts start",
+    "start:headless": "HEADLESS=true tsx src/index.ts start",
+    "inspect": "HEADLESS=false tsx src/inspect.ts"
+  },
+  "keywords": [
+    "telegram",
+    "max",
+    "playwright",
+    "bridge"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "dotenv": "^16.4.7",
+    "pino": "^9.6.0",
+    "playwright": "^1.49.1",
+    "telegraf": "^4.16.3"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.10.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "type": "module"
+}
